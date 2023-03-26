@@ -1,7 +1,7 @@
 ---
 - hosts: all
   become: true
-  become_flags: -E # Only used this if the sudo user is not able to download packages
+  # become_flags: -E # Only used this if the sudo user is not able to download packages
   
   vars:
     # Check the geerlingguy.jenkins role default/main.yml file for more variables that can be overriden
