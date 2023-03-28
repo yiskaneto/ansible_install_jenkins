@@ -35,7 +35,12 @@ update-alternatives --config java
 
 You can update an existing installation by providing the `jenkins_admin_username` and `jenkins_admin_password` variables into a vault file:
 
-1. ansible-vault create jenkins_credentials.yaml
+1. Create a new Ansible vault:
+
+    ```bash
+    ansible-vault create jenkins_credentials.yaml
+    ```
+
 1. Enter a new password and confirm it.
 1. Add the `jenkins_admin_username` and `jenkins_admin_password` parameters with their corresponding values, example:
 
