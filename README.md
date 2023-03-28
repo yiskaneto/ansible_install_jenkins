@@ -19,7 +19,7 @@ Ansible helper runbook to install Jenkins from well known roles
     time ansible-playbook main.yaml -i <node>, -b -K
     ```
 
-For a clean installation on the target node we may need to remove some files to avoid package conflicts (only do this if you are definitely not using them), the commands below explain how to do it on RHEL distribution systems but adjust it for Ubuntu: 
+For a clean installation on the target node we may need to remove some files to avoid package conflicts (only do this if you are definitely not using them), the commands below explain how to do it on RHEL distribution systems but adjust it for Ubuntu:
 
 ```bash
 sudo dnf remove java-11-openjdk java jenkins java-1.8.0-openjdk-headless -y ; sudo dnf clean all ; sudo dnf clean packages ; sudo rm -rf /var/lib/jenkins /opt/jenkins-cli.jar
