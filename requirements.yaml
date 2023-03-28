@@ -1,0 +1,6 @@
+collections:
+        - community.general
+
+roles:
+        - geerlingguy.java
+        - geerlingguy.jenkins
