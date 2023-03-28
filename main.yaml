@@ -16,7 +16,13 @@
       # - localhost
     jenkins_plugins_state: present # Change this to 'latest' to update plugins if newer versions are available.
     jenkins_plugins:
+      - credentials
       - pipeline-stage-view
+      - git-client
+      - github
+      - github-api
+      - blueocean-git-pipeline
+      - blueocean-github-pipeline
       - ansible
       - uno-choice
       - blueocean
