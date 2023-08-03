@@ -38,7 +38,7 @@ You can update an existing installation by providing the `jenkins_admin_username
 1. Create a new Ansible vault:
 
     ```bash
-    ansible-vault create jenkins_credentials.yaml
+    ansible-vault create <path to>/jenkins_credentials.yaml
     ```
 
 1. Enter a new password and confirm it.
@@ -53,5 +53,5 @@ You can update an existing installation by providing the `jenkins_admin_username
 1. Now we can run the playbook:
 
 ```bash
-time ansible-playbook main.yaml -e "@jenkins_credentials.yaml" --ask-vault-pass -i <node>, -b -K
+time ansible-playbook main.yaml -e @<path to>/jenkins_credentials.yaml --ask-vault-pass -i <node>, -b -K
 ```
