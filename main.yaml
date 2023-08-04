@@ -21,6 +21,8 @@
       - git-client
       - github
       - github-api
+      - docker-workflow
+      - docker-plugin
       - blueocean-git-pipeline
       - blueocean-github-pipeline
       - ansible
