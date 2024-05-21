@@ -17,6 +17,7 @@
     jenkins_plugins_state: present # Change this to 'latest' to update plugins if newer versions are available.
     jenkins_plugins:
       - credentials
+      - matrix-auth
       - pipeline-stage-view
       - git-client
       - github
