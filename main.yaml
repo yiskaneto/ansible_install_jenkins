@@ -4,20 +4,25 @@
   # become_flags: -E # Only used this if the sudo user is not able to download packages
   
   vars:
-    # Check the geerlingguy.jenkins role default/main.yml file for more variables that can be modified
+    # Check the geerlingguy.jenkins role defaults/main.yml file for more variables that can be modified
     jenkins_package_state: latest # Change this to `latest` to update Jenkins if a newer version is available, this won't remove the previous version
     # jenkins_hostname: "<hostname>"
     jenkins_home: /var/lib/jenkins
     jenkins_jar_location: /opt/jenkins-cli.jar
     # jenkins_proxy_host: "<proxy node or ip>"
     # jenkins_proxy_port: "<port>" #127.0.0.1 and localhost should be the minimum in the no_proxy section
+    jenkins_http_port: 8080
     # jenkins_proxy_noproxy:
       # - 127.0.0.1
       # - localhost
     jenkins_plugins_state: present # Change this to 'latest' to update plugins if newer versions are available.
+    jenkins_options: "" ## See: https://www.jenkins.io/doc/book/installing/initial-settings/
+    jenkins_admin_username: admin
+    jenkins_admin_password: admin
     jenkins_plugins:
       - credentials
       - matrix-auth
+      - authorize-project
       - pipeline-stage-view
       - git-client
       - github
