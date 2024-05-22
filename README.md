@@ -1,6 +1,6 @@
 # Ansible_Install_Jenkins
 
-Ansible helper runbook to install Jenkins from well known roles
+Ansible helper runbook to install Jenkins from [ansible-role-jenkins](https://github.com/geerlingguy/ansible-role-jenkins/tree/master)
 
 ## First time Installation
 
