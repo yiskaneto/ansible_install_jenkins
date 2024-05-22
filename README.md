@@ -11,12 +11,16 @@ Ansible helper runbook to install Jenkins from well known roles
     ```
 
 1. Open the main.yaml file and adjust the parameters values as needed.
+
     >Note: you can set the `jenkins_admin_username` and`jenkins_admin_password` variable values by using an Ansible vault file, see section [Updating existing installation](#updating-existing-installation) for a quick way to do so, the overall idea is to NOT pass these values in plain text.
 
 1. Run the playbook on the target node:
 
     ```bash
     time ansible-playbook main.yaml -i <node>, -b -K
+
+    ## if Run locally
+    time ansible-playbook main.yaml -i "$(hostname -i)", -b -K --connection=local
     ```
 
 For a clean installation on the target node we may need to remove some files to avoid package conflicts (only do this if you are definitely not using them), the commands below explain how to do it on RHEL distribution systems but adjust it for Ubuntu:
@@ -52,6 +56,9 @@ You can update an existing installation by providing the `jenkins_admin_username
 1. Save and quit.
 1. Now we can run the playbook:
 
-```bash
-time ansible-playbook main.yaml -e @<path to>/jenkins_credentials.yaml --ask-vault-pass -i <node>, -b -K
-```
+    ```bash
+    time ansible-playbook main.yaml -e @<path to>/jenkins_credentials.yaml --ask-vault-pass -i <node>, -b -K
+
+    ## If run locally:
+    time ansible-playbook main.yaml -e @<path to>/jenkins_credentials.yaml --ask-vault-pass -i "$(hostname -i)", -b -K --connection=local
+    ```
