@@ -19,7 +19,7 @@ Ansible helper runbook to install Jenkins from well known roles
     ```bash
     time ansible-playbook main.yaml -i <node>, -b -K
 
-    ## if Run locally
+    ## if run locally
     time ansible-playbook main.yaml -i "$(hostname -i)", -b -K --connection=local
     ```
 
