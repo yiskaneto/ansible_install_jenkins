@@ -17,8 +17,8 @@
       # - localhost
     jenkins_plugins_state: present # Change this to 'latest' to update plugins if newer versions are available.
     jenkins_options: "" ## See: https://www.jenkins.io/doc/book/installing/initial-settings/
-    jenkins_admin_username: admin
-    jenkins_admin_password: admin
+    # jenkins_admin_username: admin
+    # jenkins_admin_password: admin
     jenkins_plugins:
       - credentials
       - matrix-auth
