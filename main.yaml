@@ -24,6 +24,7 @@
       - matrix-auth
       - authorize-project
       - pipeline-stage-view
+      - script-security
       - git-client
       - github
       - github-api
