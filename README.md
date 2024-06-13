@@ -63,7 +63,7 @@ You can update an existing installation by providing the `jenkins_admin_username
     time ansible-playbook main.yaml -e @<path to>/jenkins_credentials.yaml --ask-vault-pass -i "$(hostname -i)", -b -K --connection=local
     ```
 
-1. I a specific version of Jenkins is needed then pass the following environmental variables to the command:
+1. If a specific version of Jenkins is needed then pass the following environmental variables to the command:
 
     ```bash
     -e "jenkins_package_state=present jenkins_version=<version>"
